@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+    <data>
+
+        <variable
+            name="article"
+            type="com.example.recyclerviewwithretrofit.ArticlesItem" />
+    </data>
+<androidx.cardview.widget.CardView
+    android:layout_marginBottom="6dp"
+
+    android:layout_width="match_parent"
+    android:layout_height="250dp"
+    android:padding="6dp"
+
+    app:cardCornerRadius="10dp"
+    android:layout_margin="6dp">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/card_view_text"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:textStyle="bold|italic"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{article.title}"/>
+        <TextView
+            android:id="@+id/card_view_description"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{article.description}"/>
+
+<!--        <ImageView-->
+<!--            android:id="@+id/card_view_image"-->
+<!--            android:scaleType="centerCrop"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            tools:src="@tools:sample/backgrounds/scenic"-->
+<!--            />-->
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
+</layout>
